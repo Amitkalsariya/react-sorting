@@ -44,14 +44,14 @@ function App() {
 
     return (
     <div className="App">
-        <table border={1} width="50%" align='center'>
+        <table border={2} width="50%" align='center'>
             <tr>
               <th>No</th>
               
               <th>Name</th>
               <th>Category</th>
             </tr>
-            <tbody>
+          
               {
                 file.filter((item) => selectname === null || item.Category === selectname).map((files) =>{
                   return(
@@ -65,8 +65,7 @@ function App() {
                   
                 )
               }
-            </tbody>
-          
+           
         </table>
         <button onClick={()=>filterData("Animal")}>Animal</button>
         <button onClick={()=>filterData("Bird")}>Bird</button>
